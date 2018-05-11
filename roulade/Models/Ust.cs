@@ -15,11 +15,16 @@ namespace roulade.Models
     {
         static public string[] USettingsList =
         {
-            "Project",
+            "ProjectName",
             "Tempo",
+            "Tracks",
             "VoiceDir",
             "CacheDir",
-            "Mode2"
+            "OutFile",
+            "Tool1",
+            "Tool2",
+            "Mode2",
+            "Flags"
         };
         static public string LOG_Dir = @"log.txt";
         static public string Text;
@@ -72,12 +77,15 @@ namespace roulade.Models
             // uVersion = data["[#VERSION]"];
             // Reading settings
             stage = "Setting";
-            //data["[#SETTING]"].Keys.CopyTo(USettingsList, 0);
-            //foreach (string setting in USettingsList)
-            //{
-            //    stage = $"Setting: {setting}";
-            //    uSettings[setting] = data["[#SETTING]"][setting];
-            //}
+            data["[#SETTING]"].Keys.CopyTo(USettingsList, 0);
+            foreach (string setting in USettingsList)
+            {
+                stage = $"Setting: {setting}";
+                if (data["[#SETTING]"].ContainsKey(setting))
+                {
+                    uSettings[setting] = data["[#SETTING]"][setting];
+                }
+            }
 
             // Sections - Version, Settings;
             stage = "Notes count";
@@ -128,7 +136,7 @@ namespace roulade.Models
             // We will apply this to "r" note which we won't consider Rest
             uDefaultNote.Intensity = 100;
             uDefaultNote.Modulation = 0;
-            uDefaultNote.Envelope = "0,21,35,0,100,100,0,%,0";
+            uDefaultNote.Set("Envelope", "0,21,35,0,100,100,0,%,0");
             uDefaultNote.PBS = "-40";
             uDefaultNote.PBW = "80";
         }

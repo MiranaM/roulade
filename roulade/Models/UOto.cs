@@ -8,8 +8,8 @@ namespace roulade.Models
 {
     public class UOto
     {
-        public string Alias { set; get; }
         public string File { set; get; }
+        public string Alias { set; get; }
         public double Offset { set; get; }
         public double Consonant { set; get; }
         public double Cutoff { set; get; }
