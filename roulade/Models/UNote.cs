@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+=======
+using roulade.Model;
+>>>>>>> 05153b0ab210e62f7eb25f76b291b577bac66d9b
 
 namespace roulade.Models
 {
