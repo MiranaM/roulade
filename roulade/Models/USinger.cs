@@ -16,6 +16,9 @@ namespace roulade.Models
         public Stream[] Paths { get; set; }
         public UOto[] UOtos { get; set; }
 
+        public USinger()
+        {
 
+        }
     }
 }
