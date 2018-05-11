@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 
-namespace roulade.Model
+namespace roulade.Models
 {
     enum Insert
     {

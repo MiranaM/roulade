@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PianoRoll.Model;
 
-namespace roulade.Model
+namespace roulade.Models
 {
 
     public class UNote
@@ -37,6 +36,8 @@ namespace roulade.Model
         public string PBS;
         public string UNumber;
         public long AbsoluteTime;
+        public int Volume = 80;
+        public UOto UOto;
 
         private List<string> GotParameters = new List<string> { };
 
@@ -238,7 +239,40 @@ namespace roulade.Model
 
         public void SendToResampler()
         {
+    //        string request = string.Format(
+    //            "{0} {1:D} {2} {3} {4:D} {5} {6} {7:D} {8:D} {9} {10}",
+    //            NoteNum,
+    //            Velocity,
+    //            Flags,
+    //            Oto.Offset,
+    //            RequiredLength,
+    //            Oto.Consonant,
+    //            Oto.Cutoff,
+    //            Volume,
+    //            0,
+				//Tempo,
+    //            String.Join(",",PitchData));
 
+
+            //RenderItem item = new RenderItem()
+            //{
+            //    // For resampler
+            //    RawFile = rawfile,
+            //    NoteNum = phoneme.Parent.NoteNum,
+            //    Velocity = (int)phoneme.Parent.Expressions["velocity"].Data,
+            //    Volume = (int)phoneme.Parent.Expressions["volume"].Data,
+            //    StrFlags = phoneme.Parent.GetResamplerFlags(),
+            //    PitchData = BuildPitchData(phoneme, part, project),
+            //    RequiredLength = (int)requiredLength,
+            //    Oto = phoneme.Oto,
+            //    Tempo = project.BPM,
+
+            //    // For connector
+            //    SkipOver = phoneme.Oto.Preutter * strechRatio - phoneme.Preutter,
+            //    PosMs = project.TickToMillisecond(part.PosTick + phoneme.Parent.PosTick + phoneme.PosTick) - phoneme.Preutter,
+            //    DurMs = project.TickToMillisecond(phoneme.DurTick) + lengthAdjustment,
+            //    Envelope = phoneme.Envelope.Points
+            //};
         }
 
         public void SendToWavtool()

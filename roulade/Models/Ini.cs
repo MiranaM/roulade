@@ -5,7 +5,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 
 
-namespace roulade.Model
+namespace roulade.Models
 {
     class Ini
     {

@@ -64,7 +64,9 @@
     </Compile>
     <Compile Include="Models\Ini.cs" />
     <Compile Include="Models\UNote.cs" />
+    <Compile Include="Models\UOto.cs" />
     <Compile Include="Models\Ust.cs" />
+    <Compile Include="Models\USinger.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
