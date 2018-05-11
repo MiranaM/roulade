@@ -5,7 +5,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 
 
-namespace PianoRoll.Model
+namespace roulade.Model
 {
     class Ini
     {

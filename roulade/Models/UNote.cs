@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PianoRoll.Model;
 
-namespace PianoRoll.Model
+namespace roulade.Model
 {
 
     public class UNote
